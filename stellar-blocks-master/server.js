@@ -34,7 +34,7 @@ app.post('/signup', (req, res) => {
     if (req.body.username)
         username = req.body.username.trim();
     const password = req.body.password;
-    if (!username || !password) return res.json({ message: "Missing required fields." }).status(400);
+    if (!username || !password) return res.status({ message: "Missing required fields." }).json(400);
 
     miniDb[username] = {
         name: "",// you can define a name field and save the data posted here.
@@ -42,7 +42,7 @@ app.post('/signup', (req, res) => {
         password
     };
 
-    return res.json({ username }).status(201);
+    return res.status({ username }).json(201);
 
 })
 app.post('/signin', (req, res) => {
