@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+<style>
+    #transactions {
+        background-color: burlywood;
+
+    }
+
+    #fetchButton {
+        background-color: burlywood;
+        padding: 2 2 2 2;
+
+    }
+
+    body {
+        margin: 10px;
+    }
+
+    #title {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 30px;
+    }
+    #access-container{
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
+
+<body>
+    <div id="access-container">
+        <div class="form">
+            <div class="form-field">
+                <input id="signup-user" type="text" placeholder="Username" name="username">
+            </div>
+
+            <div class="form-field">
+                <input id="signup-pass" type="password" placeholder="Password">
+            </div>
+            <div class="form-field">
+                <input type="password" placeholder="Re-type password" name="password">
+            </div>
+            <div>
+                <button onclick="signMeUp()">Sign Up</button>
+            </div>
+        </div>
+        <div class="form">
+            <div class="form-field">
+                <input id="signin-user" type="text" placeholder="Username" name="username">
+            </div>
+
+            <div class="form-field">
+                <input id="signin-pass" type="password" placeholder="Password">
+            </div>
+    
+            <div>
+                <button onclick="signMeIn()">Sign In</button>
+            </div>
+        </div>
+    </div>
+    
+    <!--<h1 id="title">Transactions</h1>-->
+
+    <!--<div>
+        <ol id="transactions">
+
+        </ol>
+        <button id="fetchButton" onclick="handleFetchTransactions()">Fetch</button>
+    </div>-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar-sdk/9.0.1/stellar-sdk.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

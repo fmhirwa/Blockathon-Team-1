@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Projects!</title>
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyC77SC7qPvtF7hM8FW3PeN0CHAx8S_mpHo",
+          authDomain: "gofund-pro.firebaseapp.com",
+          projectId: "gofund-pro",
+          storageBucket: "gofund-pro.appspot.com",
+          messagingSenderId: "730864987734",
+          appId: "1:730864987734:web:2e3e035ec267b7885dd5f7",
+          measurementId: "G-W7Q4X7X8E2"
+        };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        function writeData(){
+            firebase.database().ref("User").set({
+                name: document.getElementById("Pname").value,
+                des: document.getElementById("Dname").value,
+                amount: document.getElementById("Tname").value
+            });
+        }
+      </script>
+    <label for="Pname">Project Name:</label><br>
+    <input type="text" id="Pname" placeholder="name" ><br>
+    <label for="Dname">Project Description:</label><br>
+    <textarea type="text" id="Dname" placeholder="des" rows="4" cols="50"></textarea><br>
+    <label for="Pname">Total Amount Required (Ksh):</label><br>
+    <input type="text" id="Tname" placeholder="amount" ><br><br>
+    <button onclick = "writeData">Submit</button>
+  <a href="home.html">
+    <input type="submit"value="Back"/>
+   </a>
+</body>
+</html>
