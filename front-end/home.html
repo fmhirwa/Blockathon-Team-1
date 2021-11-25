@@ -6,16 +6,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to GoFund Pro</title>
 </head>
+
+<link href="https://fonts.googleapis.com/css2?family=Flamenco&family=IBM+Plex+Sans+Condensed:ital,wght@0,400;0,700;1,400&family=Sirin+Stencil&display=swap" rel="stylesheet">
+
+<style>
+
+    :root {
+		font-family: 'Flamenco', cursive;
+		--body-font: 'IBM Plex Sans Condensed', sans-serif;
+		--header-font: 'Sirin Stencil', cursive;
+
+	}
+
+	header {
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 7vh;
+	    background-color: coral;
+		z-index: 99999;
+		font-family: var(--header-font), cursive;
+
+	}
+
+    h1 {
+		text-align: center;
+		position: relative;
+		top: 0px;
+		/*background-color: crimson;*/
+		max-width: 20%;
+		height: auto;
+		margin: auto;
+		margin-top: -1vh;
+		font-size: 5vh;
+		color: white;
+		-webkit-text-stroke: 0.05px black;
+		max-width: 40%;
+	}
+
+    body {
+        background-color: rgb(238, 160, 132);
+        position: relative;
+        margin-top: 8vh;
+		background: repeating-linear-gradient(90deg, rgb(238, 160, 132) 1.5px, white 3px, rgb(238, 160, 132) 4.5px);
+		font-family: var(--body-font), sans-serif;
+		font-size: 2vw;
+		
+    }
+
+    .projects_box {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+		margin: auto;
+		border-color: black;
+		border-width: 0.2vw;
+		border-left-style: solid;
+		border-right-style: solid;
+		/*border-radius: 1.5%;*/
+		max-width: 100%;
+		width: 70vw;
+		height: 25vw;
+		border-color: rgb(238, 160, 132);
+
+	}
+
+    .project {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 20vw;
+		margin: 1vw 1vw 1vw 1vw;
+		border-width: 2px;
+		border-radius: 2%;
+		border-top-style: solid;
+		border-bottom-style: solid;
+		border-color: rgb(238, 160, 132);
+	}
+
+    .button {
+		bottom: 1vh;
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	.button:hover {
+		background-color: rgba(238, 160, 132, 1.5);
+
+	}
+
+	.button {
+		font-family: var(--header-font), cursive;
+		background-color: transparent;
+		background: rgba(238, 160, 132, 0.1);
+		border-width: 2px;
+		border-radius: 5%;
+		border-color: rgb(238, 160, 132);
+		color:#ffffffbe;
+		font-weight: bold;
+	}
+    
+    .projects-box:hover, h2:hover {
+		animation-name: smaller;
+		animation-duration: 750ms;
+		animation-fill-mode: forwards;
+    }    
+    .button:hover, .project:hover {
+		animation-name: bigger;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes smaller {
+		100% {
+			transform: scale(0.9);
+			background: rgba(140, 86, 53, 0.1);
+		}
+	}
+
+	@keyframes bigger {
+		100% {
+			transform: scale(1.1);
+		}
+	}
+
+    
+    
+</style>
+
 <body>
-    <h1> GoFund Pro</h1>
-    <h2>"Find your fun project and be a part of it by helping out in funding it!"</h2>
-    <p>Find Projects that need funding:</p>
-    <a href="projects.html">
-        <input type="submit"value="Projects"/>
-       </a>
-       <p>Enter Your Project:</p>
-    <a href="newproject.html">
-        <input type="submit"value="New Project"/>
-       </a>
+    <header>
+        <h1> GoFund Pro</h1>
+    </header>
+    <div class = projects_box>
+        <div class = project>
+            <h2>Find Projects that need funding:</h2>
+            <a href="projects.html">
+            <input class = button type="submit"value="Projects"/>
+           </a>
+        </div>
+    
+        <div class = project>
+            <h2>Enter Your Project:</h2>
+            <a href="newproject.html">
+            <input class = button type="submit"value="New Project"/>
+           </a>
+        </div>
+    </div>
+    
+    
+       
 </body>
 </html>
